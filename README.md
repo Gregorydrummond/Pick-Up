@@ -88,7 +88,7 @@ Organize and join local pickup basketball games.
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="Pickup Wirefrmae.jpg" width=600>
+<img src="https://raw.githubusercontent.com/Gregorydrummond/Pick-Up/main/PickUp%20Wireframe.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
