@@ -147,6 +147,25 @@ Organize and join local pickup basketball games.
    | updatedAt       | DateTime  | date when post is last updated (default field) |
    
 ### Networking
-- [Add list of network requests by screen ]
+#### List of network requests by screen
+- Login Screen
+    - (Read/GET) Get user credentials, verify username and password
+- Register Screen
+    - (CREATE/POST) Register user using passed in credentials
+- Game Feed Screen
+    - (Read/GET) Query all games where nearby user
+- Game Detail Screen
+    - (Read/GET) Query details of selected game
+    - (Update/POST) Update game object when new player joins
+- Game Creation Screen
+    - (Create/POST) Create a new game object
+- Game End Screen
+    - (Create/POST) Create a new gameStats object
+    - (Update/POST) Update gameStats data
+    - (Update/POST) Update game's property "gameEnded" to true
+- User Profile Screen
+    - (Read/Get) Query all games where user participated in
+    - (Read/Get) Query user's stats
+    - (Read/Get) Query user's settings
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
