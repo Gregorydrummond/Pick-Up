@@ -95,9 +95,57 @@ Organize and join local pickup basketball games.
 ### [BONUS] Interactive Prototype
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+#### User
+   | Property        | Type      | Description |
+   | -------------   | --------  | ------------|
+   | objectId        | String    | unique id for the user post (default field) |
+   | usename         | String    | Name user signs up with |
+   | password        | String    | Password user signs up with |
+   | profilePicture  | File      | Picture of user |
+   | playerLocation  | GeoPoint  | GeoPoint |
+   | maxDistance	   | int       | How far the user wants to search for a game (miles) |
+   | games	         | Array	   | Array of games the user participated in |
+   | currentGame	   | Game      | Game user is in |
+   | gameStats	      | Array     | Array of game stats |
+   | gamesWon	      | int    	| How many games user won |
+   | gamesPlayed	   | int       | How many games user played |
+   | totalPoints	   | int       | How many points user scored |
+   | createdAt       | DateTime  | date when post is created (default field) |
+   | updatedAt       | DateTime  | date when post is last updated (default field) |
+   
+#### Game
+   | Property        | Type      | Description |
+   | -------------   | --------  | ------------|
+   | objectId        | String    | unique id for the user post (default field) |
+   | locationName    |	String	| Name of game's location  |                     
+   | creator	      | User	   | Who created the game |
+   | gameType	      | String	   | Type of game |
+   | playerLimit	   | int	      | How many people can join in at the most |
+   | scoreLimit	   | int	      | Score to reach to end the game | 
+   | winByTwo	      | Boolean	| Whether or not teams have to win by 2 | 
+   | gameStarted	   | Boolean   | Whether the game started or not | 
+   | teamA	         | Array     | Array of users on team A | 
+   | teamB	         | Array     | Array of users on team B | 
+   | score	         | int	      | Score of game | 
+   | gameEnded	      | Boolean	| Did the game end? | 
+   | players	      | Array	   | Array of users | 
+   | createdAt       | DateTime  | date when post is created (default field) |
+   | updatedAt       | DateTime  | date when post is last updated (default field) |
+   
+#### GameStat
+   | Property        | Type      | Description |
+   | -------------   | --------  | ------------|
+   | objectId        | String    | unique id for the user post (default field) |
+   | game	         | Game	   | Which game the stats belong in |
+   | user	         | User	   | Which user these stats belong to |
+   | points	         | int	      | Amount of points user scored |
+   | gameWon	      | Boolean   | Did the player win? |
+   | teamScore	      | int	      | Amount of points user's team scored |
+   | opponentScore	| int	      | Amount of points user's opponent scored |
+   | createdAt       | DateTime  | date when post is created (default field) |
+   | updatedAt       | DateTime  | date when post is last updated (default field) |
+   
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
